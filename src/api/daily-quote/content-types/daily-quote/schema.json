@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daily_quotes",
+  "info": {
+    "singularName": "daily-quote",
+    "pluralName": "daily-quotes",
+    "displayName": "Daily Quote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "en",
+        "es",
+        "fr",
+        "ro",
+        "hi"
+      ]
+    }
+  }
+}
