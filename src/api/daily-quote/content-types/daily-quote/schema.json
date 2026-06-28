@@ -19,7 +19,8 @@
         "es",
         "fr",
         "ro",
-        "hi"
+        "hi",
+        "ml"
       ]
     },
     "date": {
@@ -58,10 +59,6 @@
         "videos",
         "audios"
       ]
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "message_title"
     }
   }
 }
