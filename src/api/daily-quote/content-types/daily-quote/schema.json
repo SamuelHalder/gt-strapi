@@ -13,6 +13,7 @@
   "attributes": {
     "language": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "en",
         "es",

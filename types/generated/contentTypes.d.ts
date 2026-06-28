@@ -461,7 +461,8 @@ export interface ApiDailyQuoteDailyQuote extends Struct.CollectionTypeSchema {
       true
     >;
     dq_submitted_by: Schema.Attribute.String;
-    language: Schema.Attribute.Enumeration<['en', 'es', 'fr', 'ro', 'hi']>;
+    language: Schema.Attribute.Enumeration<['en', 'es', 'fr', 'ro', 'hi']> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
