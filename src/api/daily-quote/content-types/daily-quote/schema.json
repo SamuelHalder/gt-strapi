@@ -20,6 +20,47 @@
         "ro",
         "hi"
       ]
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "scripture_location": {
+      "type": "string",
+      "required": false
+    },
+    "scripture": {
+      "type": "blocks",
+      "required": false
+    },
+    "scripture_submitted_by": {
+      "type": "string"
+    },
+    "message_title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "blocks"
+    },
+    "dq_submitted_by": {
+      "type": "string"
+    },
+    "dq_Image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "message_title"
     }
   }
 }

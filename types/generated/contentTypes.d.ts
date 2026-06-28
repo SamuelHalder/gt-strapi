@@ -451,9 +451,16 @@ export interface ApiDailyQuoteDailyQuote extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    author: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    dq_Image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    dq_submitted_by: Schema.Attribute.String;
     language: Schema.Attribute.Enumeration<['en', 'es', 'fr', 'ro', 'hi']>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -461,7 +468,13 @@ export interface ApiDailyQuoteDailyQuote extends Struct.CollectionTypeSchema {
       'api::daily-quote.daily-quote'
     > &
       Schema.Attribute.Private;
+    message_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    quote: Schema.Attribute.Blocks;
+    scripture: Schema.Attribute.Blocks;
+    scripture_location: Schema.Attribute.String;
+    scripture_submitted_by: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'message_title'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
