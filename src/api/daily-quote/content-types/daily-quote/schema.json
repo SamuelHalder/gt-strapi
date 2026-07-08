@@ -59,6 +59,24 @@
         "videos",
         "audios"
       ]
+    },
+    "scripture_2_location": {
+      "type": "string"
+    },
+    "scripture_2": {
+      "type": "blocks"
+    },
+    "scripture_2_submitted_by": {
+      "type": "string"
+    },
+    "message_2_title": {
+      "type": "string"
+    },
+    "author_2": {
+      "type": "string"
+    },
+    "quote_2": {
+      "type": "blocks"
     }
   }
 }

@@ -452,6 +452,7 @@ export interface ApiDailyQuoteDailyQuote extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.String;
+    author_2: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -471,10 +472,15 @@ export interface ApiDailyQuoteDailyQuote extends Struct.CollectionTypeSchema {
       'api::daily-quote.daily-quote'
     > &
       Schema.Attribute.Private;
+    message_2_title: Schema.Attribute.String;
     message_title: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     quote: Schema.Attribute.Blocks;
+    quote_2: Schema.Attribute.Blocks;
     scripture: Schema.Attribute.Blocks;
+    scripture_2: Schema.Attribute.Blocks;
+    scripture_2_location: Schema.Attribute.String;
+    scripture_2_submitted_by: Schema.Attribute.String;
     scripture_location: Schema.Attribute.String;
     scripture_submitted_by: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
