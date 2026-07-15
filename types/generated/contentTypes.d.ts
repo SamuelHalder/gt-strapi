@@ -489,28 +489,37 @@ export interface ApiDailyQuoteDailyQuote extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiEnglishArchiveEnglishArchive
+export interface ApiHindiArchiveHindiArchive
   extends Struct.CollectionTypeSchema {
-  collectionName: 'english_archives';
+  collectionName: 'hindi_archives';
   info: {
-    displayName: 'English Archive';
-    pluralName: 'english-archives';
-    singularName: 'english-archive';
+    displayName: 'Hindi Archive';
+    pluralName: 'hindi-archives';
+    singularName: 'hindi-archive';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
+    archive_date: Schema.Attribute.String & Schema.Attribute.Unique;
+    bro: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    epub_comments: Schema.Attribute.String;
+    epub_message: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::english-archive.english-archive'
+      'api::hindi-archive.hindi-archive'
     > &
       Schema.Attribute.Private;
+    pdf_comments: Schema.Attribute.String;
+    pdf_message: Schema.Attribute.String;
+    place: Schema.Attribute.String;
+    preached: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1029,7 +1038,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::daily-quote.daily-quote': ApiDailyQuoteDailyQuote;
-      'api::english-archive.english-archive': ApiEnglishArchiveEnglishArchive;
+      'api::hindi-archive.hindi-archive': ApiHindiArchiveHindiArchive;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

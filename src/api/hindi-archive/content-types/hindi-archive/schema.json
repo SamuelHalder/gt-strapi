@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hindi_archives",
+  "info": {
+    "singularName": "hindi-archive",
+    "pluralName": "hindi-archives",
+    "displayName": "Hindi Archive"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "archive_date": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "bro": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "pdf_comments": {
+      "type": "string"
+    },
+    "epub_comments": {
+      "type": "string"
+    },
+    "pdf_message": {
+      "type": "string"
+    },
+    "epub_message": {
+      "type": "string"
+    },
+    "preached": {
+      "type": "string"
+    }
+  }
+}
